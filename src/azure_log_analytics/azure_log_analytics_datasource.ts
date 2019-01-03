@@ -78,7 +78,7 @@ export default class AzureLogAnalyticsDatasource {
       );
       const generated = querystringBuilder.generate();
 
-      const url = `${this.baseUrl}/${item.workspace}/query?${generated.uriString}`;
+      const url = `${this.baseUrl}/${item.workspace || this.defaultOrFirstWorkspace}/query?${generated.uriString}`;
 
       return {
         refId: target.refId,
