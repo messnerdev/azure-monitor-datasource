@@ -101,7 +101,9 @@
         <label class="gf-form-label query-keyword width-9">Workspace</label>
         <div class="gf-form-select-wrapper gf-form-select-wrapper--caret-indent">
           <select class="gf-form-input min-width-12" ng-model="ctrl.target.azureLogAnalytics.workspace" ng-options="f.value as f.text for f in ctrl.workspaces"
-            ng-change="ctrl.refresh()"></select>
+            ng-change="ctrl.refresh()">
+            <option value="">default</option>
+          </select>
         </div>
       </div>
       <div class="gf-form">
